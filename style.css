@@ -1,0 +1,45 @@
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    
+    flex-direction: row;
+    margin: 10px;
+    background-color: aqua;
+
+}
+
+.logo{
+    position: relative;
+    background-color: brown;
+    height: 100px;
+    width: 500px;
+    top: 100px; 
+}
+
+.blue{
+    position: absolute;
+    background-color:blue;
+    height: 50px;
+    width: 100px;
+    
+}
+li{
+    padding: 20px;
+}
+
+.footer{
+   
+    
+   
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    
+
+}
+
+
+.f1{
+    background-color: aqua;
+}
