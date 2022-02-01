@@ -43,3 +43,11 @@ li{
 .f1{
     background-color: aqua;
 }
+
+button{
+    padding: 10px ;
+    background-color: blueviolet;
+    color: aliceblue;
+    
+
+}
