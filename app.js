@@ -13,19 +13,31 @@
 // let myDogAge = myage*humandogratio
 // console.log(myDogAge)
 
-let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0;
+console.log(saveEl)
+var welcomeEl = document.getElementById("welcome-el")
+var name = "Suhani"
+var greeting = " How are you "
+welcomeEl.innerText = name + greeting; 
+
+welcomeEl.innerText = welcomeEl.innerText + "😊"
+
+
 console.log(countEl)
 let lap1 = 0;
 function increment() {
     
     console.log("Button was clicked")
-    lap1 = lap1+1;
-    countEl.innerText = lap1;
+    count += 1;
+    countEl.innerText = count;
     // console.log(lap1++)
 }
 
 function save() {
-    console.log(lap1)
+   let saveDash = count + " - "
+   saveEl.textContent += saveDash
 }
 
 let lap2 = 33;
@@ -37,5 +49,6 @@ function countdown()
     let final_lap = lap1 + lap2 + lap3;
     console.log(final_lap)
 };
+
 
 // countEl.addEventListener("click", increment);
