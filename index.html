@@ -8,17 +8,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  <div>
-    <h1>People Entered: </h1>
-    <h2 id="count-el">0</h2>
-    <button id="incrementbtn" onclick="increment()">INCREMENT</button>
-    <button id="savebtn" onclick="save()">SAVE</button>
-    <p id="welcome-el"></p>
-    <p id = "save-el">Previous Entries: </p>
-    <script src="app.js">
+    <div>
+      <h1>People Entered:</h1>
+      <h2 id="count-el">0</h2>
+      <button id="incrementbtn" onclick="increment()">INCREMENT</button>
+      <button id="savebtn" onclick="save()">SAVE</button>
+      <p id="welcome-el"></p>
+      <p id="save-el">Previous Entries:</p>
+      <p>Nike Shoe</p>
+      <button id="purchase-btn" onclick="error()">Purchase</button>
+      <p id="error"></p>
+    </div>
+    <span id="num1-el"></span>
+    <span id="num2-el"></span>
+    <br />
+    <br />
+    <button id="add-el" onclick="add()">Add</button>
+    <button id="sub-el" onclick="sub()">Subtract</button>
+    <button id="divide-el" onclick="divide()">Divide</button>
+    <button id="multiply-el" onclick="multiply()">Multiply</button>
+    <br />
+    <br />
+    <span id="final-result">Sum: </span>
+    <div id="blackjack-game">
+    <hr>
+      <h1>Blackjack</h1>
+      <p id="message-el">Want to play a round?</p>
+      <input type="text" id="textfield1" size="5"/>  
+      <input type="text" id="textfield1" size="5"/>  
+      <p>Cards:</p>
+      <p id="sum">Sum:</p>
       
-    </script>
-  </div>
-    
+      <button id="start-game" onclick="startGame()">START GAME</button>
+      <p id="game-element"></p>
+      <button id="clear-btn" onclick="clearFields()">Clear</button>
+      
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>

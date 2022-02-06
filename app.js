@@ -7,7 +7,6 @@
 // document.getElementById("count-el ").innerText = count
 
 // var myage = 18
-
 // var humandogratio = 7
 
 // let myDogAge = myage*humandogratio
@@ -23,7 +22,7 @@ var greeting = " How are you "
 welcomeEl.innerText = name + greeting; 
 
 welcomeEl.innerText = welcomeEl.innerText + "😊"
-
+ 
 
 console.log(countEl)
 let lap1 = 0;
@@ -32,12 +31,15 @@ function increment() {
     console.log("Button was clicked")
     count += 1;
     countEl.innerText = count;
+
     // console.log(lap1++)
 }
 
 function save() {
    let saveDash = count + " - "
    saveEl.textContent += saveDash
+   count = 0;
+   countEl.innerText = count;
 }
 
 let lap2 = 33;
@@ -47,8 +49,102 @@ let lap3 = 36;
 function countdown()
 {
     let final_lap = lap1 + lap2 + lap3;
-    console.log(final_lap)
+    console.log(final_lap) 
 };
 
 
-// countEl.addEventListener("click", increment);
+let errorEl = document.getElementById("error")
+
+function error(){
+    errorEl.innerText = "Error"
+    
+
+}
+
+let num1 = 8
+let num2 = 2
+
+let addEl = document.getElementById("add-el")
+let subEl = document.getElementById("sub-el")
+let divideEl = document.getElementById("divide-el")
+let multiplyEl = document.getElementById("multiply-el")
+let finalResult = document.getElementById("final-result")
+document.getElementById("num1-el").textContent = num1
+document.getElementById("num2-el").textContent = num2
+
+function add()
+{
+
+    sum = num1+num2
+    finalResult.textContent = "Sum: " + sum
+    
+}
+
+
+function sub()
+{
+
+    sub = num1-num2
+    finalResult.textContent = "Subtraction: " + sub
+    
+}
+
+
+function divide()
+{
+
+    dvd = num1/num2
+    finalResult.textContent = "Division: " + dvd
+    
+}
+
+
+function multiply()
+{
+
+    mult = num1*num2
+    finalResult.textContent = "Multiplication: " + mult
+    
+}
+
+
+var firstCard = parseInt(document.getElementById("textfield1").value)
+var secondCard = parseInt(document.getElementById("#textfield2").value)
+
+
+let hasBlackJack = false
+let isAlive = true
+let message = ""
+
+console.log(message)
+
+
+let gameElement = document.getElementById("game-element")
+var final_sum= document.getElementById("sum")
+final_sum.value = firstCard + secondCard
+function startGame()
+{
+    // gameElement.innerText="Game has Started"
+    if (final_sum <= 20) {
+        message="Do you want to draw a another card 🙂"
+    }
+    else if (final_sum === 21) {
+        message="Wohoo You've won the blackjack 🤩"
+        hasBlackJack = true
+    }
+    else{
+        message="You're out of the game 😶"
+        isAlive = false
+    }
+    gameElement.innerText = message;
+}
+function sumcards() {
+    
+    final_sum.innerText = final_sum.value
+}
+//clearFields()
+
+function clearFields() {
+    gameElement.innerText=""
+   
+}
