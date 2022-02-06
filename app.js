@@ -108,9 +108,9 @@ function multiply()
 }
 
 
-var firstCard = parseInt(document.getElementById("textfield1").value)
-var secondCard = parseInt(document.getElementById("#textfield2").value)
-
+let firstCard = 8
+let secondCard = 2
+let final_sum = firstCard+secondCard
 
 let hasBlackJack = false
 let isAlive = true
@@ -118,10 +118,11 @@ let message = ""
 
 console.log(message)
 
-
+let messageEl = document.getElementById("message-el")
 let gameElement = document.getElementById("game-element")
-var final_sum= document.getElementById("sum")
-final_sum.value = firstCard + secondCard
+let Sum = document.getElementById("sum")
+let Cards = document.getElementById("cards")
+
 function startGame()
 {
     // gameElement.innerText="Game has Started"
@@ -136,15 +137,21 @@ function startGame()
         message="You're out of the game 😶"
         isAlive = false
     }
-    gameElement.innerText = message;
+    messageEl.innerText = message;
+    Sum.innerText = "Sum: "+ final_sum
+    Cards.innerText = "Cards: "+ firstCard + " " + secondCard
+   
 }
-function sumcards() {
-    
-    final_sum.innerText = final_sum.value
-}
+
 //clearFields()
 
 function clearFields() {
-    gameElement.innerText=""
+    messageEl.innerText=""
+    Sum.innerText="Sum: "
+    Cards.innerText="Cards: "
    
+}
+
+function newCard() {
+    console.log("New Card is generated")
 }
