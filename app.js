@@ -111,7 +111,7 @@ function multiply()
 let firstCard = 8
 let secondCard = 2
 let final_sum = firstCard+secondCard
-
+let cards = [firstCard,secondCard]
 let hasBlackJack = false
 let isAlive = true
 let message = ""
@@ -123,8 +123,18 @@ let gameElement = document.getElementById("game-element")
 let Sum = document.getElementById("sum")
 let Cards = document.getElementById("cards")
 
-function startGame()
+
+function startGame() {
+    renderGame() 
+ }
+function renderGame()
 {
+    Sum.innerText = "Sum: "+ final_sum
+    Cards.innerText = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        Cards.textContent +=  cards[i] + " "
+        
+    }
     // gameElement.innerText="Game has Started"
     if (final_sum <= 20) {
         message="Do you want to draw a another card 🙂"
@@ -138,8 +148,8 @@ function startGame()
         isAlive = false
     }
     messageEl.innerText = message;
-    Sum.innerText = "Sum: "+ final_sum
-    Cards.innerText = "Cards: "+ firstCard + " " + secondCard
+    
+    // Cards.textContent = "Cards: "+ cards[0] + " " + cards[1]
    
 }
 
@@ -154,4 +164,13 @@ function clearFields() {
 
 function newCard() {
     console.log("New Card is generated")
+    let newcard = 12
+    final_sum += newcard
+    cards.push(newcard)
+    renderGame()
+    // Sum.innerText = "Sum: "+ final_sum
+    // Cards.innerText  += cards.push(newcard)
+    
+    // console.log(cards)
+   
 }
