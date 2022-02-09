@@ -108,8 +108,8 @@ function multiply()
 }
 
 
-let firstCard = 8
-let secondCard = 2
+let firstCard = Math.floor(Math.random()* 13 + 1)
+let secondCard = Math.floor(Math.random()* 13 + 1)
 let final_sum = firstCard+secondCard
 let cards = [firstCard,secondCard]
 let hasBlackJack = false
@@ -123,7 +123,17 @@ let gameElement = document.getElementById("game-element")
 let Sum = document.getElementById("sum")
 let Cards = document.getElementById("cards")
 
+let randomNumber = Math.floor(Math.random()* 13)
 
+
+function rolldice() {
+    let firstCard = Math.floor(Math.random()* 13 + 1)
+    return firstCard
+
+}
+
+
+console.log(randomNumber) 
 function startGame() {
     renderGame() 
  }
@@ -164,7 +174,7 @@ function clearFields() {
 
 function newCard() {
     console.log("New Card is generated")
-    let newcard = 12
+    let newcard = Math.floor(Math.random()* 13 + 1)
     final_sum += newcard
     cards.push(newcard)
     renderGame()
