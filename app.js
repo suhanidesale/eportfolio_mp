@@ -104,8 +104,19 @@ let messageEl = document.getElementById("message-el");
 let gameElement = document.getElementById("game-element");
 let Sum = document.getElementById("sum");
 let Cards = document.getElementById("cards");
-
+let playerName = "Per";
+let playerChips = 145;
 // let randomNumber = Math.floor(Math.random() * 13);
+let player = {
+  key1: 1,
+  key2: 2,
+  name: "Per",
+  chips: 145
+}
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
+
 
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13 + 1);
